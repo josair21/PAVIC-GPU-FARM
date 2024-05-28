@@ -9,7 +9,10 @@ From: nvidia/cuda:12.4.1-base-ubuntu22.04
     # python3-tk is required by matplotlib.
     # python3-dev is needed to require some packages.
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        python3.11 
+        python3.11 \
+	python3-tk \
+	python3-pip \
+	python3-setuptools  
     # Reduce the size of the image by deleting the package lists we downloaded,
     # which are useless now.
     rm -rf /var/lib/apt/lists/*
